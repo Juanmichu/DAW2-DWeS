@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+body
+{
+    text-align: center;
+    font-family: 'Lora','sans-serif';
+}
+.fila
+{
+    display: flex;
+    justify-content: space-around;
+}
+.boton
+{
+    padding: 10px 30px;
+    border: 1px solid darkgray;
+    background-color: #f6f6f6;
+    color: #3a3a3a;
+    font-weight: 700;
+    text-decoration: none;
+    transition: .5s
+}
+
+.boton:hover
+{
+    transform: scale(1.05);
+    box-shadow: 0 0 5px #3a3a3a;
+    transition: .5s
+}
