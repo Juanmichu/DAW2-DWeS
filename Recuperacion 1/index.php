@@ -1,8 +1,9 @@
 <?php
 
-global $prestamosArray;
+require_once($_SERVER['DOCUMENT_ROOT'] . '/Ejercicio_1/Controllers/indexDispatcher.php');
 
-require_once($_SERVER['DOCUMENT_ROOT'] . '/Ejercicio_1/Controllers/indexController.php');
+$indexDispatcher = new \Controllers\indexDispatcher();
+$prestamosArray = $indexDispatcher->load();
 
 ?>
 
@@ -39,7 +40,7 @@ require_once($_SERVER['DOCUMENT_ROOT'] . '/Ejercicio_1/Controllers/indexControll
                     <tr>
                         <td><?= $prestamo['socio'] ?></td>
                         <td><?= $prestamo['prestamos'] ?></td>
-                        <td><a class="boton show-prestamos" href="./index.php?mostrar=true&soc_id=<?= $id ?>">Ver préstamos</a></td>
+                        <td><a class="boton show-prestamos" href="./mostrarPrestamos.php?soc_id=<?= $id ?>">Ver préstamos</a></td>
                     </tr>
                 <?php } ?>
             </tbody>
